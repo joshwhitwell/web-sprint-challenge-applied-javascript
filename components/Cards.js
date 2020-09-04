@@ -24,15 +24,16 @@
 // Get Request
 axios.get('https://lambda-times-api.herokuapp.com/articles')
     .then(response => {
-        const nameArr = ['javascript', 'bootstrap', 'technology', 'jquery', 'node']
-        console.log(nameArr[0])
-        nameArr.forEach(element => {
-            let name = response.data.articles[element]
-            name.forEach(element => {
+        const topicArr = ['javascript', 'bootstrap', 'technology', 'jquery', 'node']
+        for (let i = 0; i < topicArr.length; i++) {
+            let topic = response.data.articles[topicArr[i]]
+            topic.forEach(element => {
                 const newArticle = makeArticle(element)
+                newArticle.classList.add(topicArr[i])
+                console.log(newArticle)
                 articleContainer.appendChild(newArticle)
             })
-        })
+        }
     })
     .catch(error => {
         console.log(error)

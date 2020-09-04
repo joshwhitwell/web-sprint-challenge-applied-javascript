@@ -29,9 +29,24 @@ function Tab(string) {
 
     //Add Class Name
     tab.classList.add('tab')
+    tab.classList.add(string)
 
     // Add Content
     tab.textContent = string
+
+    // Click Listener
+    tab.addEventListener('click', (event) => {
+        const allCards = Array.from(document.querySelectorAll('.card'))
+        const javaCards = Array.from(document.querySelectorAll('.card .javascript'))
+        allCards.forEach(element => {
+            if (event.target.className === element.className) {
+                element.style.display = ''
+            }
+            if (event.target.className != element.className) {
+                element.style.dispaly = 'none'
+            }
+        })
+    })
 
     // Output Tab
     return tab
@@ -39,3 +54,8 @@ function Tab(string) {
 
 // Select Topics Container
 const topicsContainer = document.querySelector('div.topics')
+const allTab = document.createElement('div')
+allTab.classList.add('tab')
+allTab.textContent = 'All'
+topicsContainer.appendChild(allTab)
+console.log(allTab)

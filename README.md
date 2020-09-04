@@ -27,14 +27,30 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
+<!--
+DOm stands for the document object model. The DOM is an object representation of the html elements of a webpage. The DOM is a language neutral API that serves as a bridge between the content of a webpage and the browser. The DOM is tree-like in structure and individual elements of the DOM are represented as nodes, which may be of different types. We can access and manipulate the DOM using Javascript using methods and properties of the document object.
+-->
+
 
 2. What is an event?
+<!--
+Events are user interactions that a browser watches for on a webpage, such as a click, or keystroke. When an event happens it is known as a trigger, which may then cause an event handler to be fired, i.e. an action is executed in response to the trigger.
+-->
 
 3. What is an event listener?
+<!--
+The process of tracking and taking action based on an event on an element is known as an event listener. Event listeners are applied to elements with parameters of a trigger (such as a click) and callback function that is the event handler, i.e. the action that will be executed upon the trigger; when the trigger is fired the callback is run. Event listeners can be applied to individual, or multiple DOM elements, or the document object itself.
+-->
 
 4. Why would we convert a NodeList into an Array?
+<!--
+Node lists are array like in structure which means they have length properties, and indexed values. However the index values of node lists are read only, which means we can not directly reassign or manipulate the values of a node list using standard methods. For this reason, in order to manipulate and reassign the values of a node list it needs to be converted to an array using Array.from().
+-->
 
 5. What is a component?
+<!--
+Components are reusable pieces of code that can be used to build elements that share functionality and style. Components are created in Javascript, but they utilize methods that apply HTML and CSS in order to output a singular moduler component. Components that are created in Javascript do not directly alter the source HTML or CSS documents, but instead manipulate the DOM. Therefore, components that have been created in Javascript exist in the browser memory only until they have been explicity added to the DOM.
+-->
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
