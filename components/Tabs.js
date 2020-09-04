@@ -38,14 +38,13 @@ function Tab(string) {
     tab.addEventListener('click', (event) => {
         const allCards = Array.from(document.querySelectorAll('.card'))
         const javaCards = Array.from(document.querySelectorAll('.card .javascript'))
-        allCards.forEach(element => {
-            if (event.target.className === element.className) {
-                element.style.display = ''
-            }
-            if (event.target.className != element.className) {
-                element.style.dispaly = 'none'
-            }
-        })
+        const bootCards = Array.from(document.querySelectorAll('.card .bootstrap'))
+        const techCards = Array.from(document.querySelectorAll('.card .technology'))
+        const queryCards = Array.from(document.querySelectorAll('.card .jquery'))
+        const nodeCards = Array.from(document.querySelectorAll('.card .node'))
+        
+        console.log(event.target.className)
+        
     })
 
     // Output Tab
@@ -58,4 +57,3 @@ const allTab = document.createElement('div')
 allTab.classList.add('tab')
 allTab.textContent = 'All'
 topicsContainer.appendChild(allTab)
-console.log(allTab)
