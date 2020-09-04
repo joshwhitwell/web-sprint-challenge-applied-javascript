@@ -30,6 +30,7 @@ axios.get('https://lambda-times-api.herokuapp.com/articles')
             topic.forEach(element => {
                 const newArticle = makeArticle(element)
                 newArticle.classList.add(topicArr[i])
+                newArticle.classList.add('all')
                 articleContainer.appendChild(newArticle)
             })
         }
